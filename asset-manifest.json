@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/newwordreact/static/css/main.3587d2ee.chunk.css",
+    "main.js": "/newwordreact/static/js/main.d5bfdda7.chunk.js",
+    "main.js.map": "/newwordreact/static/js/main.d5bfdda7.chunk.js.map",
+    "runtime-main.js": "/newwordreact/static/js/runtime-main.45c7df5b.js",
+    "runtime-main.js.map": "/newwordreact/static/js/runtime-main.45c7df5b.js.map",
+    "static/js/2.f5a9f850.chunk.js": "/newwordreact/static/js/2.f5a9f850.chunk.js",
+    "static/js/2.f5a9f850.chunk.js.map": "/newwordreact/static/js/2.f5a9f850.chunk.js.map",
+    "index.html": "/newwordreact/index.html",
+    "precache-manifest.3d596f0640f2bd07a20fc3253d6d9bdc.js": "/newwordreact/precache-manifest.3d596f0640f2bd07a20fc3253d6d9bdc.js",
+    "service-worker.js": "/newwordreact/service-worker.js",
+    "static/css/main.3587d2ee.chunk.css.map": "/newwordreact/static/css/main.3587d2ee.chunk.css.map",
+    "static/js/2.f5a9f850.chunk.js.LICENSE.txt": "/newwordreact/static/js/2.f5a9f850.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45c7df5b.js",
+    "static/js/2.f5a9f850.chunk.js",
+    "static/css/main.3587d2ee.chunk.css",
+    "static/js/main.d5bfdda7.chunk.js"
+  ]
+}

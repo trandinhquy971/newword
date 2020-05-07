@@ -2,7 +2,7 @@
   "name": "newword-redux-saga--styled-component",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://trandinhquy971.github.io/newword",
+  "homepage": "https://newwordreactjs.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

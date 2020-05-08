@@ -16,7 +16,8 @@ class App extends Component {
 				<div className={this.props.className} style={{
 					background:  `url(${"https://thietbiketnoi.com/wp-content/uploads/2020/01/tong-hop-hinh-nen-background-vector-designer-dep-do-phan-giai-fhd-2k-4k-moi-nhat-16.jpg"})`,
 					backgroundSize: "cover",
-					backgroundAttachment: "fixed"
+					backgroundAttachment: "fixed",
+					backgroundPosition: "bottom right"
 				}}>
 					<NavBarContainer></NavBarContainer>
 					<Switch>

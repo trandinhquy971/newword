@@ -6,8 +6,15 @@ class CardItem extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isOpen: false
+			isOpen: false,
+			isOpenCard: false
 		}
+	}
+
+	onCardClick = () => {
+		this.setState({
+			isOpenCard: !this.state.isOpenCard
+		})
 	}
 
 	onClick = () => {
@@ -35,7 +42,7 @@ class CardItem extends Component {
 		
 		return (
 			<div className={`col-xs-12 col-sm-12 col-md-4 col-lg-3 ${this.props.className}`}>
-				<div className="card">
+				<div className="card" onClick={this.onCardClick}>
 					<CardButton onClick={this.onClick}
 						onOutsideClick={this.onOutsideClick}>
 						<i className="fa fa-ellipsis-v"></i>
@@ -48,12 +55,14 @@ class CardItem extends Component {
 					<div className="card-body">
 						<h4 className="card-title">{word.word}</h4>
 						<small>{word.pronunciation}</small>
-						<p className="card-text">{word.meaning.map((line, index) => (
-							<React.Fragment key={index}>
-								{index!== 0?<br />:null}
-								{`• ${line}`}
-							</React.Fragment>
-						))}</p>
+						{
+							this.state.isOpenCard?<p className="card-text">{word.meaning.map((line, index) => (
+								<React.Fragment key={index}>
+									{index!== 0?<br />:null}
+									{`• ${line}`}
+								</React.Fragment>
+							))}</p>:null
+						}
 					</div>
 				</div>
 			</div>
@@ -128,6 +137,7 @@ const DefaultCardItem = styled(CardItem)`
 		background-color: #F0F2F5 !important;
 		padding: 10px;
 		border-radius: 5px;
+		transition: all 0.2s;
 	}
 
 	.marker {

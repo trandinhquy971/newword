@@ -9,9 +9,10 @@ class CardItem extends Component {
 			isOpen: false,
 			isOpenCard: false
 		}
+		this.cardRef = React.createRef()
 	}
 
-	onCardClick = () => {
+	onCardClick = (event) => {
 		this.setState({
 			isOpenCard: !this.state.isOpenCard
 		})

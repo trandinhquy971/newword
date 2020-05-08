@@ -156,5 +156,12 @@ const DefaultCardItem = styled(CardItem)`
 		margin-top: 10px;
 		font-size: 16px;
 	}
+
+	@media (max-width: 576px){
+		.card:hover {
+			transform: translateY(0px);
+			box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2) !important;
+		}
+	}
 `
 export default DefaultCardItem

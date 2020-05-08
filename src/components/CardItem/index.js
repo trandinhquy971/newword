@@ -55,14 +55,12 @@ class CardItem extends Component {
 					<div className="card-body">
 						<h4 className="card-title">{word.word}</h4>
 						<small>{word.pronunciation}</small>
-						{
-							this.state.isOpenCard?<p className="card-text">{word.meaning.map((line, index) => (
-								<React.Fragment key={index}>
-									{index!== 0?<br />:null}
-									{`• ${line}`}
-								</React.Fragment>
-							))}</p>:null
-						}
+						<p className={`card-text ${this.state.isOpenCard?null:'card-text-hide'}`}>{word.meaning.map((line, index) => (
+							<React.Fragment key={index}>
+								{index!== 0?<br />:null}
+								{`• ${line}`}
+							</React.Fragment>
+						))}</p>
 					</div>
 				</div>
 			</div>
@@ -123,14 +121,22 @@ const DefaultCardItem = styled(CardItem)`
 		margin-right: 0px;
 	}
 
-
 	.card-title {
 		color: black;
 		margin-bottom: 0px;
+		transition: all 0.2s !important;
 	}
 
 	.card-body {
 		padding: 10px !important;
+	}
+
+	
+	.card-text-hide {
+		height: 0px;
+		padding: 0px 10px !important;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	.card-text {

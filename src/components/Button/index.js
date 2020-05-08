@@ -9,8 +9,6 @@ class Button extends Component {
 	
 	
 	componentDidMount() {
-		if(this.props.ref)
-			this.props.ref(this.wrapperRef)
 		document.addEventListener('click', this.handleClickOutside)
 	}
 
@@ -21,7 +19,7 @@ class Button extends Component {
 
 	onClick = (event) => {
 		event.stopPropagation(); 
-		this.props.onClick();
+		this.props.onClick(event);
 	}
 
 	handleClickOutside = (event) => {

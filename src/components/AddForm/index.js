@@ -115,7 +115,8 @@ const DefaultAddForm = styled(AddForm)`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         height: auto;
         background-color: white;
         border-radius: 10px;

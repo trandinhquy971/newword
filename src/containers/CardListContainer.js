@@ -24,6 +24,18 @@ class CardListContainer extends Component {
 		this.props.onEdit(wordInfo)
 	}
 
+	reverseDateFormat = (string) => {
+		var arr = string.split("/")
+		var ret = ""
+		arr.forEach((item, index) => {
+			if(index !== 0)
+				ret = item + "-" + ret
+				else 
+				ret = item + ret
+		})
+		return ret
+	}
+
 	renderList = () => {
 		var { words, filter } = this.props
 		var filteredWords = words.filter((word) => word.word.startsWith(filter))
@@ -38,8 +50,8 @@ class CardListContainer extends Component {
 		})
 		var keys = Object.keys(catalogedWords)
 		keys.sort((a, b) => {
-			let da = new Date(a)
-			let db = new Date(b)
+			let da = new Date(this.reverseDateFormat(a))
+			let db = new Date(this.reverseDateFormat(b))
 			return da < db ? 1 : -1
 		})		
 		
